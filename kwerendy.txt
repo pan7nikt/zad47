@@ -1,0 +1,5 @@
+INSERT INTO `filmy` (`id`, `gatunki_id`, `rezyserzy_id`, `tytul`, `rok`, `ocena`) VALUES ('0', '5', '', 'Suburbicon', '2017', '5');
+
+SELECT filmy.tytul,gatunki.nazwa FROM filmy JOIN gatunki on filmy.gatunki_id=gatunki.id WHERE ocena=6;
+
+SELECT filmy.tytul,filmy.rok FROM filmy JOIN gatunki on filmy.gatunki_id=gatunki.id WHERE ocena=5 AND gatunki.nazwa='dramat';
